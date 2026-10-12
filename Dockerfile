@@ -5,10 +5,13 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Csak a futtatáshoz szükséges fájlokat másoljuk
 COPY . .
 RUN npm install
 RUN npm run build
+
+
+
+# Csak a futtatáshoz szükséges fájlokat másoljuk
 
 EXPOSE 3000
 
