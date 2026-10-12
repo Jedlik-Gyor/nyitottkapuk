@@ -29,8 +29,8 @@ jobs:
 
       - name: Docker image exists with current version
         run: |
-          TOKEN=$(curl -u bognarpal:${{ secrets.GHCR_TOKEN }} https://ghcr.io/token\?scope\="repository:siro-gyor/nyitottkapuk-swdev-2026>:pull" | jq -r .token)
-          errcount=$(curl -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.docker.distribution.manifest.v2+json" https://ghcr.io/v2/jedlik-gyor/nyitottkapuk-swdev-2026/manifests/${{steps.get-version.outputs.current-version}} | jq -r '.errors | length')
+          TOKEN=$(curl -u bognarpal:${{ secrets.GHCR_TOKEN }} https://ghcr.io/token\?scope\="repository:siro-gyor/nyitottkapuk>:pull" | jq -r .token)
+          errcount=$(curl -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.docker.distribution.manifest.v2+json" https://ghcr.io/v2/jedlik-gyor/nyitottkapuk/manifests/${{steps.get-version.outputs.current-version}} | jq -r '.errors | length')
           if [[ $errcount -eq 0 ]] 
           then  
             exit 1
