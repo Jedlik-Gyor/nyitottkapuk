@@ -73,5 +73,4 @@ jobs:
         run: |
           mkdir -p ~/.kube
           echo "${{ secrets.KUBECONFIG_CONTENT_BASE64 }}" | base64 -d > ~/.kube/config 
-          cat ~/.kube/config
           kubectl apply -f k8s/nyitottkapuk-swdev-2026-deployment.yaml
