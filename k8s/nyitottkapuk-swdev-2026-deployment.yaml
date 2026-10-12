@@ -49,10 +49,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - nyk2025.jedlik.cloud
+        - nyitottkapuk.jedlik.cloud
       secretName: bp-jedlik-cloud
   rules:
-    - host: nyk2025.jedlik.cloud
+    - host: nyitottkapuk.jedlik.cloud
       http:
         paths:
           - path: /?(.*)
